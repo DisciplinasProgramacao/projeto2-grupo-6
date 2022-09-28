@@ -21,7 +21,16 @@ public class Graph {
 	public void SizeGraph () {}
 	
 	//Checar a exitencia de uma aresta
-	public void checkEdge () {}
+	public void checkEdge () {
+		for(int i  = 0; i< nodeList.size(); i++) {		
+			for(int  j : adjacencyMatrix[i]) {
+				if(i == 1) {
+				System.out.println("Tem aresta");
+				}
+			}
+	
+		}
+	}
 	
 	//Gerar um grafo completo
 	public void CompleteGraph() {}
