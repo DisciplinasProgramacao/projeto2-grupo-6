@@ -17,6 +17,25 @@ public class Graph {
 		adjacencyMatrix[j][i] = 1;		
 	}
 	
+	//Checar ordem e tamanho do grafo
+	public void SizeGraph () {}
+	
+	//Checar a exitencia de uma aresta
+	public void checkEdge () {}
+	
+	//Gerar um grafo completo
+	public void CompleteGraph() {}
+	
+	//Gerar um subgrafo 
+	public void Subgraph () {}
+	
+	//Criação de arestas ponderadas
+	public void weightedEdge () {}
+	
+	//Encontrar caminho entre dois vertices
+	
+	//Caminho euleriano (Hierholzer ou Fleury)
+	
 	public String toString() {
 		StringBuilder s = new StringBuilder();
 		s.append("   ");
@@ -46,7 +65,8 @@ public class Graph {
 		return neighbors;
 	}
 	
-	void dfsVisit(GraphNode node) {
+	// Busca em Profundidade
+	public void dfsVisit(GraphNode node) {
 		Stack<GraphNode> stack = new Stack<>();
 		stack.push(node);
 		while(!stack.isEmpty()) {
@@ -63,7 +83,7 @@ public class Graph {
 		}			
 		}
 	
-	void dfs() {
+	public void dfs() {
 		for (GraphNode node : nodeList) {
 			if(!node.isVisited) {
 				dfsVisit(node);
