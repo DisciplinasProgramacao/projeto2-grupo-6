@@ -18,7 +18,25 @@ public class Graph {
 	}
 	
 	//Checar ordem e tamanho do grafo
-	public void SizeGraph () {}
+	public void SizeGraph () {
+	
+			
+		int ordem = 0; // numero de vertices
+		int tamanho = 0; // numero de arestas 
+		
+		for(int i  = 0; i< nodeList.size(); i++) {				
+			ordem++;			
+			for(int  j : adjacencyMatrix[i]) {
+				if(adjacencyMatrix[i][j] == 1) {
+					tamanho++;
+			}
+			}	
+	}		
+		
+		System.out.println("Ordem: " +  ordem);
+		System.out.println("Tamanho: " + tamanho/2);
+		
+	}
 	
 	//Checar a exitencia de uma aresta
 	public void checkEdge () {
