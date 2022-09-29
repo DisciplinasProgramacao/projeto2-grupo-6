@@ -37,7 +37,7 @@ public class Main {
 		  
 		  String path = "c:\\temp\\FileSave.txt";
 		  
-		  try (BufferedWriter bw = new BufferedWriter(new FileWriter(path))) {
+		  try (BufferedWriter bw = new BufferedWriter(new FileWriter(path,true))) {
 			  for (String line : lines) {
 				  bw.write(line);
 				  bw.newLine();
@@ -67,6 +67,8 @@ public class Main {
 		System.out.println(g.toString());
 		
 		g.dfs();
+		
+		g.SizeGraph();
 		
 	}
 
